@@ -1,0 +1,419 @@
+body {
+	font-family: monospace;
+	font-weight: bold;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+nav {
+	width: 100%;
+	height: 80px;
+	box-shadow: 0px 5px 10px grey;
+}
+.container {
+	height: 100%;
+	width: 1140px;
+	max-width: 100%;
+	margin: auto;
+    
+}
+.row {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+ nav .row {
+ 	align-items: center;
+	height: 100%;
+	justify-content: space-between;
+}
+.logo {
+	height: 80%;
+}
+
+.topnav {
+	display: flex;
+	gap: 40px;
+	align-items: center;
+}
+.topnav-li {
+	list-style: none;
+	position: relative;
+	padding: 28px 0px;
+}
+
+.topnav-li:hover .dropdown {
+	display: flex;
+}
+.topnav-link:hover {
+	color: black;
+}
+
+.topnav-link {
+	font-size: 20px;
+	color: grey;
+}
+
+
+
+.dropdown {
+	position: absolute;
+	width: 100%;
+	background: dimgray;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-size: 18px;
+	display: none;
+	top: 80px;
+}
+
+.dropdown a {
+	color: whitesmoke;
+	padding: 10px 0px;
+}
+.dropdown a:hover {
+    color: dimgray;
+	background-color: ghostwhite;
+}
+
+
+
+header {
+	height: 620px;
+	box-shadow: 0px 5px 10px grey;
+	background-image: url(../img/srobk.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position-x: 15%;
+}
+
+.textbox {
+	background: lightgray;
+	text-align: center;
+	padding: 40px;
+	padding-bottom: 72px;
+	outline: 25px solid lightgray;
+	outline-offset: 8px;
+}
+.textbox h1 {
+ font-size: 72px;
+ margin-bottom: 40px;
+}
+.textbox p {
+font-size: 32px;
+color: dimgray;
+}
+
+header .row {
+	align-items: center;
+	height: 100%;
+	justify-content: end;
+}
+
+
+
+.portfolio {
+	height: fit-content;
+	width: 100%;
+	margin-top: 100px;
+}
+.portfolio .portfolioMenu {
+	display: flex;
+	gap: 35px;
+}
+
+.portfolio .portfolioMenu li {
+	list-style: none;
+	color: black;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+.portfolio .portfolioMenu li:hover {
+	background-color: black;
+	color: whitesmoke;
+
+}
+.portfolio .projects {
+	text-align: center;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 50px 0px;
+	padding-bottom: 100px;
+}
+.father {
+	width: 30%;
+	padding: 20px 5px;
+}
+.portfolio .projects .card {
+box-shadow: 3px 4px 10px dimgray;
+padding-bottom: 20px;
+width: 100%;
+}
+
+.portfolio .projects .card img {
+	/*width: 300px;
+	height: 200px;*/
+	width: 100%;
+	height: 300px;
+}
+.portfolio .projects .card h3 {
+	padding: 20px;
+}
+.portfolio .projects .father:nth-child(2) img, 
+.portfolio .projects .father:nth-child(5) img {
+	height: 350px;
+}
+
+
+
+.blog {
+width: 100%;
+padding:100px 0px;
+background: rgb(122, 106, 75, 0.2);
+box-shadow: 3px 4px 10px lightgray;
+}
+.blog h1 {
+text-align: center;
+color: dimgray;
+margin-bottom: 20px;
+}
+.blog h3 {
+	padding: 15px 0px;
+}
+.blog p {
+	color: dimgray;
+}
+.blog .blogCards {
+display: flex;
+flex-wrap: wrap;
+}
+.blog .blogCards .father {
+    width: 30%;
+	padding: 20px 5px;
+
+}
+.blog .blogCards .father .card {
+padding-bottom: 20px;
+width: 100%;
+text-align: center;
+}
+.blog .blogCards .father .card img {
+	width: 280px;
+	height: 300px;
+}
+
+
+
+
+footer {
+	height: 80px;
+	color: dimgray;
+}
+footer .row {
+	justify-content: space-between;
+	height: 100%;
+}
+footer .socialX {
+	display: flex;
+	list-style: none;
+	gap: 25px;
+}
+svg {
+	color: black;
+}
+.arrowUp {
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	opacity: 0.3;
+}
+
+
+#burgerMenuIcon {
+	display: none;
+}
+#burgerMenu {
+	display: none;
+}
+
+@media only screen and (max-width:1050px) {
+	
+
+	.topnav {
+		display: none;
+	}
+
+	#burgerMenu:checked ~ .topnav {
+		display: flex;
+	}
+	#burgerMenuIcon {
+		display: block;
+		z-index: 999;
+	}
+
+    .topnav {
+    	display: none;
+    	position: fixed;
+    	width: 100%;
+    	height: 100%;
+    	background: whitesmoke;
+    	top: 0;
+    	left: 0;
+    	flex-direction: column;
+    	align-items: center;
+    }
+
+    .father {
+    	width: 50%;
+    }
+
+}
+@media only screen and (max-width:1079px) {
+	.father {
+		flex-direction: column;
+    	align-items: center;
+		margin: auto;
+		width: 300px;
+	}
+
+}
+
+@media only screen and (max-width:700px) {
+	.father {
+		flex-direction: column;
+    	align-items: center;
+		margin: auto;
+	}
+}
+@media only screen and (max-width:500px) {
+	.father {
+		flex-direction: column;
+    	align-items: center;
+		width: 300px;
+		margin: auto;
+	}
+}
+
+@media only screen and (max-width:563px) {
+	.portfolioMenu {
+		flex-direction: column;
+    	align-items: center;
+	}
+}
+
+
+@media only screen and (max-width:400px) {
+	.father {
+		flex-direction: column;
+    	align-items: center;
+		width: 300px;
+		margin: auto;
+	}
+}
+
+
+
+@media only screen and (max-width:1829px) {
+
+.textbox {
+	background: lightgray;
+	text-align: center;
+	padding: 40px;
+	padding-bottom: 72px;
+	outline: 25px solid lightgray;
+	outline-offset: 8px;
+}
+.textbox h1 {
+ font-size: 50px;
+ margin-bottom: 40px;
+}
+.textbox p {
+font-size: 22px;
+color: dimgray;
+}
+
+
+}
+
+
+@media only screen and (max-width:1215px) {
+
+
+.textbox {
+	margin-right: 20px;
+	padding-bottom: 52px;
+}
+.textbox h1 {
+ font-size: 30px;
+ margin-bottom: 20px;
+}
+.textbox p {
+font-size: 18px;
+color: dimgray;
+}
+
+
+}
+
+@media only screen and (max-width:800px) {
+
+
+.textbox {
+	margin: auto;
+	padding-bottom: 52px;
+	outline: 18px solid rgb(94, 109, 119, 0.5);
+	background: rgb(94, 109, 119, 0.5);
+	padding: 5px;
+	padding-bottom: 30px;
+}
+.textbox h1 {
+ font-size: 30px;
+ margin-bottom: 20px;
+}
+.textbox p {
+font-size: 18px;
+color: dimgray;
+}
+
+
+}
+
+
+
+@media only screen and (max-width:991px) {
+	.blogCards {
+		flex-direction: column;
+    	align-items: center;
+	}
+
+	.blog .blogCards .father {
+    width: 60%;
+	padding: 20px 5px;
+
+}
+}
+
+@media only screen and (max-width:476px) {
+	.blogCards {
+		flex-direction: column;
+    	align-items: center;
+	}
+
+	.blog .blogCards .father {
+    width: 100%;
+	padding: 20px 5px;
+
+}
+}
